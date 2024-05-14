@@ -31,8 +31,9 @@ jobs:
       run: |
           git config --global user.name "agnese-carraro"
           git config --global user.email "agnese.carraro@studenti.unipd.it"
-          mvn -B package --file pom.xml 
-          echo "fdsjkb" >> README.md
+          script output.txt
+          mvn -B package --file pom.xml > output.txt
+          cat output.txt > README.md
           git add README.md
           git commit -m "aggiunta riga"
           git push
