@@ -35,5 +35,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: readme update 
-        run: echo "oisn" >> README.md
+        run: |
+          git config --global user.name "agnese-carraro"
+          git config --global user.email "agnese.carraro@studenti.unipd.it"
+          echo "oisn" >> README.md
+          git add README.md
+          git commit -m "aggiunta riga"
+          git push
     
