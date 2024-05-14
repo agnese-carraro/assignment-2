@@ -39,7 +39,7 @@ public class IntegerToRoman {
             result = result.concat(c4[number-1]);
         }
 
-        if (!result.isEmpty()) return result;
+        if (!result.isEmpty()) {return result;}
         else {return null;}
     }
 
