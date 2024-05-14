@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.mycompany.app.IntegerToRomanTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.055 s <<< FAILURE! - in com.mycompany.app.IntegerToRomanTest
-test3(com.mycompany.app.IntegerToRomanTest)  Time elapsed: 0.005 s  <<< FAILURE!
-java.lang.AssertionError: expected:<null> but was:<XIX>
-	at com.mycompany.app.IntegerToRomanTest.test3(IntegerToRomanTest.java:40)
-
