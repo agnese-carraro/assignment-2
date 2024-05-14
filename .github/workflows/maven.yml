@@ -29,7 +29,4 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
-    - name: Update README
-      run: |
-        echo "Build status: Success" > README.md
     
