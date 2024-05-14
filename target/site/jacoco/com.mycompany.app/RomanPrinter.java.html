@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RomanPrinter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">my-app</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.app</a> &gt; <span class="el_source">RomanPrinter.java</span></div><h1>RomanPrinter.java</h1><pre class="source lang-java linenums">package com.mycompany.app;
+
+<span class="nc" id="L3">public class RomanPrinter {</span>
+    public static String print(int num){
+<span class="nc" id="L5">        return printAsciiArt(IntegerToRoman.conv(num));</span>
+    }
+    private static String printAsciiArt(String romanNumber){
+<span class="nc" id="L8">        String result = &quot;&quot;;</span>
+
+        // lettera I
+<span class="nc" id="L11">        String[] i = {&quot; _____ &quot;, &quot;|_   _|&quot;, &quot;  | |  &quot;,</span>
+                &quot;  | |  &quot;, &quot; _| |_ &quot;, &quot;|_____|&quot;};
+
+        // lettera V
+<span class="nc" id="L15">        String[] v = {&quot; __      __ &quot;, &quot; \\ \\    / / &quot;,</span>
+                &quot;  \\ \\  / /  &quot;, &quot;   \\ \\/ /   &quot;,
+                &quot;    \\  /    &quot;, &quot;     \\/     &quot;};
+
+        // lettera X
+<span class="nc" id="L20">        String[] x = {&quot; __   __ &quot;, &quot; \\ \\ / / &quot;, &quot;  \\ V /  &quot;,</span>
+                &quot;   &gt; &lt;   &quot;, &quot;  / . \\  &quot;, &quot; /_/ \\_\\ &quot;};
+
+        // lettera L
+<span class="nc" id="L24">        String[] l = {&quot;  _      &quot;, &quot; | |     &quot;, &quot; | |     &quot;,</span>
+                &quot; | |     &quot;, &quot; | |____ &quot;, &quot; |______|&quot;};
+
+        // lettera C
+<span class="nc" id="L28">        String[] c = {&quot;   _____ &quot;, &quot;  / ____|&quot;, &quot; | |     &quot;,</span>
+                &quot; | |     &quot;, &quot; | |____ &quot;, &quot;  \\_____|&quot;};
+
+        // lettera D
+<span class="nc" id="L32">        String[] d = {&quot;  _____  &quot;, &quot; |  __ \\ &quot;, &quot; | |  | |&quot;,</span>
+                &quot; | |  | |&quot;, &quot; | |__| |&quot;, &quot; |_____/ &quot;};
+
+        // lettera M
+<span class="nc" id="L36">        String[] m = {&quot;  __  __ &quot;, &quot; |  \\/  |&quot;, &quot; | \\  / |&quot;,</span>
+                &quot; | |\\/| |&quot;, &quot; | |  | |&quot;, &quot; |_|  |_|&quot;};
+
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        for (int j = 0; j &lt; 6; j++) {</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">            for (int k = 0; k &lt; romanNumber.length(); k++) {</span>
+<span class="nc" id="L41">                char letter = romanNumber.charAt(k);</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">                if (letter == 'I') {</span>
+<span class="nc" id="L43">                    result = result.concat(i[j]);</span>
+                }
+<span class="nc bnc" id="L45" title="All 2 branches missed.">                else if (letter == 'V') {</span>
+<span class="nc" id="L46">                    result = result.concat(v[j]);</span>
+                }
+<span class="nc bnc" id="L48" title="All 2 branches missed.">                else if (letter == 'X') {</span>
+<span class="nc" id="L49">                    result = result.concat(x[j]);</span>
+                }
+<span class="nc bnc" id="L51" title="All 2 branches missed.">                else if (letter == 'L') {</span>
+<span class="nc" id="L52">                    result = result.concat(l[j]);</span>
+                }
+<span class="nc bnc" id="L54" title="All 2 branches missed.">                else if (letter == 'C') {</span>
+<span class="nc" id="L55">                    result = result.concat(c[j]);</span>
+                }
+<span class="nc bnc" id="L57" title="All 2 branches missed.">                else if (letter == 'D') {</span>
+<span class="nc" id="L58">                    result = result.concat(d[j]);</span>
+                }
+<span class="nc bnc" id="L60" title="All 2 branches missed.">                else if (letter == 'M') {</span>
+<span class="nc" id="L61">                    result = result.concat(m[j]);</span>
+                }
+            }
+<span class="nc" id="L64">            result = result.concat(&quot;\n&quot;);</span>
+        }
+
+<span class="nc bnc" id="L67" title="All 2 branches missed.">        if (!result.isEmpty()) {return result;}</span>
+<span class="nc" id="L68">        else {return null;}</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

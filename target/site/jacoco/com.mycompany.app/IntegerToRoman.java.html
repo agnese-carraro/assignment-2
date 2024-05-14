@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>IntegerToRoman.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">my-app</a> &gt; <a href="index.source.html" class="el_package">com.mycompany.app</a> &gt; <span class="el_source">IntegerToRoman.java</span></div><h1>IntegerToRoman.java</h1><pre class="source lang-java linenums">
+package com.mycompany.app;
+
+<span class="nc" id="L4">public class IntegerToRoman {</span>
+    public static String conv(int number) {
+<span class="nc" id="L6">        String result = &quot;&quot;;</span>
+<span class="nc" id="L7">        String[] c1 = {&quot;M&quot;};</span>
+        // da aggiungere al terzo passo.
+<span class="nc" id="L9">        String[] c2 = {&quot;C&quot;,&quot;CC&quot;,&quot;CCC&quot;,&quot;CD&quot;,&quot;D&quot;, &quot;DC&quot;, &quot;DCC&quot;, &quot;DCCC&quot;, &quot;CM&quot;};</span>
+        // da aggiungere al secondo passo.
+<span class="nc" id="L11">        String[] c3 = {&quot;X&quot;,&quot;XX&quot;,&quot;XXX&quot;,&quot;XL&quot;,&quot;L&quot;, &quot;LX&quot;, &quot;LXX&quot;, &quot;LXXX&quot;, &quot;XC&quot;};</span>
+        // da tenere dall'inizio
+<span class="nc" id="L13">        String[] c4 = {&quot;I&quot;,&quot;II&quot;,&quot;III&quot;,&quot;IV&quot;,&quot;V&quot;, &quot;VI&quot;, &quot;VII&quot;, &quot;VIII&quot;, &quot;IX&quot;};</span>
+
+<span class="nc" id="L15">        int n = number /1000;</span>
+<span class="nc bnc" id="L16" title="All 2 branches missed.">        if (n != 0) {</span>
+<span class="nc" id="L17">            result = result.concat(c1[n-1]);</span>
+<span class="nc" id="L18">            number  = number - n*1000;</span>
+        }
+
+
+        // da aggiungere al terzo passo.
+<span class="nc" id="L23">        n = number /100;</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">        if (n != 0) {</span>
+<span class="nc" id="L25">            result = result.concat(c2[n-1]);</span>
+<span class="nc" id="L26">            number  = number - n*100;</span>
+        }
+
+
+        // da aggiungere al seecondo passo.
+<span class="nc" id="L31">        n = number /10;</span>
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        if (n != 0) {</span>
+<span class="nc" id="L33">            result = result.concat(c3[n-1]);</span>
+<span class="nc" id="L34">            number  = number - n*10;</span>
+        }
+
+        // da tenere dall'inizio
+<span class="nc bnc" id="L38" title="All 4 branches missed.">        if (number &gt; 0 &amp;&amp; number &lt; 10) {</span>
+<span class="nc" id="L39">            result = result.concat(c4[number-1]);</span>
+        }
+
+<span class="nc bnc" id="L42" title="All 2 branches missed.">        if (!result.isEmpty()) {return result;}</span>
+<span class="nc" id="L43">        else {return null;}</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>
