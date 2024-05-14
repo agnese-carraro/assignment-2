@@ -28,18 +28,14 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B package --file pom.xml 
-      
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: readme update 
-        run: |
+      run: |
           git config --global user.name "agnese-carraro"
           git config --global user.email "agnese.carraro@studenti.unipd.it"
-          stdout >> README.md
+          mvn -B package --file pom.xml 
+          echo "fdsjkb" >> README.md
           git add README.md
           git commit -m "aggiunta riga"
           git push
+      
+  
     
