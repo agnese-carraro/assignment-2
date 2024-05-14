@@ -60,7 +60,5 @@ public class RomanPrinter {
         else return null;
     }
 
-    public static void main(String[] args) {
-        System.out.print(print(387));
-    }
+    
 }
