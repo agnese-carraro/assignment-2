@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --global user.name "agnese-carraro"
           git config --global user.email "agnese.carraro@studenti.unipd.it"
-          echo "oisn" >> README.md
+          stdout >> README.md
           git add README.md
           git commit -m "aggiunta riga"
           git push
