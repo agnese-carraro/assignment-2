@@ -33,6 +33,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: readme update 
-        run: echo "oisn" >> ../README.md
+        run: echo "oisn" >> README.md
     
