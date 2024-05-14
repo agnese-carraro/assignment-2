@@ -1,0 +1,35 @@
+name: build
+
+on: 
+  push:
+    branches: [ main ]
+    paths: [ '**.java', '.github/workflows/jacoco.yml', 'pom.xml' ]
+  pull-request:
+    branches: [ main ]
+  workflow_dispatch: 
+  
+jobs:
+  jacoco-java-maven: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@4
+
+      - name: setup JDK17
+        uses: actions/setup-java@4
+        with: 
+          distribution: 'adopt'
+          java-version: '17'
+
+      - name: build with Maven
+        run: mvn -B package -Pcoverage
+
+      - name: log coverage percentages to workflow output
+        run: |
+          echo "coverage = ${{ steps.jacoco.outputs.coverage }}"
+
+      - name: get coverage info
+        run: |
+          echo "Total coverage  ${{ steps.jacoco.outputs.coverage-overall }}"
+          echo "Chenged files coverage ${{ steps.jacoco.outputs.coverage-changed-files }}"
+        
