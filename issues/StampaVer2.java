@@ -50,7 +50,4 @@ public class StampaVer2 {
         if (!result.isEmpty()) {return result;}
         else {return null;}
     }
-    public static void main(String[] args) {
-        System.out.print(print(9));
-    }
 }

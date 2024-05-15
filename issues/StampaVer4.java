@@ -1,6 +1,6 @@
-public class StampaVer3 {
+public class StampaVer4 {
     public static String print(int num){
-        return printAsciiArt(ConvertVer3.conv(num));
+        return printAsciiArt(ConvertVer4.conv(num));
     }
     private static String printAsciiArt(String romanNumber){
         String result = "";
@@ -62,6 +62,6 @@ public class StampaVer3 {
         else {return null;}
     }
     public static void main(String[] args) {
-        System.out.print(print(987));
+        System.out.print(print(1000));
     }
 }

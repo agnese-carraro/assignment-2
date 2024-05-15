@@ -11,16 +11,16 @@ public class ConvertVer3 {
 
 
         // da aggiungere al terzo passo.
-        int n = number /100;
-        if (n > 1 && n < 10) {
+        int n = number/100;
+        if (n > 0 && n < 10) {
             result = result.concat(c3[n-1]);
             number  = number - n*100;
         }
 
 
-        // da aggiungere al seecondo passo.
-        n = number /10;
-        if (n > 1 && n < 10) {
+        // da aggiungere al secondo passo.
+        n = number/10;
+        if (n > 0 && n < 10) {
             result = result.concat(c2[n-1]);
             number  = number - n*10;
         }
@@ -33,5 +33,7 @@ public class ConvertVer3 {
         if (!result.isEmpty()) {return result;}
         else {return null;}
     }
-
+    public static void main(String[] args) {
+        System.out.print(conv(19));
+    }
 }

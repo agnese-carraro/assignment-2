@@ -8,8 +8,8 @@ public class ConvertVer2 {
         String[] c1 = {"I","II","III","IV","V", "VI", "VII", "VIII", "IX"};
 
         // da aggiungere al secondo passo.
-        int n = number /10;
-        if (n > 1 && n < 10) {
+        int n = number/10;
+        if (n > 0 && n < 10) {
             result = result.concat(c2[n-1]);
             number  = number - n*10;
         }
@@ -22,5 +22,7 @@ public class ConvertVer2 {
         if (!result.isEmpty()) {return result;}
         else {return null;}
     }
-
+    public static void main(String[] args) {
+        System.out.print(conv(10));
+    }
 }

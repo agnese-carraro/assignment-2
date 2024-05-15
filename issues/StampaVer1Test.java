@@ -27,8 +27,7 @@ public class StampaVer1Test {
                   | |     \\ \\/ /  \s
                  _| |_     \\  /   \s
                 |_____|     \\/    \s
-                """,
-                StampaVer1.print(4));
+                """, StampaVer1.print(4));
         assertEquals("""
                  __      __  _____  _____\s
                  \\ \\    / / |_   _||_   _|

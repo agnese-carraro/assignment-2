@@ -4,10 +4,11 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 public class StampaVer2Test {
+    @Test
     public void NullTest() {
-        assertNull(StampaVer1.print(-8));
-        assertNull(StampaVer1.print(0));
-        assertNull(StampaVer1.print(19));
+        assertNull(StampaVer2.print(-8));
+        assertNull(StampaVer2.print(0));
+        assertNull(StampaVer2.print(173));
     }
     @Test
     public void NumbersTest() {
@@ -18,7 +19,7 @@ public class StampaVer2Test {
                   | |    | |    | | \s
                  _| |_  _| |_  _| |_\s
                 |_____||_____||_____|
-                """, StampaVer1.print(3));
+                """, StampaVer2.print(3));
         assertEquals("""
                  _____  __      __\s
                 |_   _| \\ \\    / /\s
@@ -26,8 +27,7 @@ public class StampaVer2Test {
                   | |     \\ \\/ /  \s
                  _| |_     \\  /   \s
                 |_____|     \\/    \s
-                """,
-                StampaVer1.print(4));
+                """, StampaVer2.print(4));
         assertEquals("""
                  __      __  _____  _____\s
                  \\ \\    / / |_   _||_   _|
@@ -35,7 +35,7 @@ public class StampaVer2Test {
                    \\ \\/ /     | |    | | \s
                     \\  /     _| |_  _| |_\s
                      \\/     |_____||_____|
-                """, StampaVer1.print(7));
+                """, StampaVer2.print(7));
         assertEquals("""
                  _____  __   __\s
                 |_   _| \\ \\ / /\s
@@ -43,19 +43,49 @@ public class StampaVer2Test {
                   | |     > <  \s
                  _| |_   / . \\ \s
                 |_____| /_/ \\_\\\s
-                """, StampaVer1.print(9));
+                """, StampaVer2.print(9));
         assertEquals("""
-                """, StampaVer1.print(28));
+                 __   __  __   __  __      __  _____  _____  _____\s
+                 \\ \\ / /  \\ \\ / /  \\ \\    / / |_   _||_   _||_   _|
+                  \\ V /    \\ V /    \\ \\  / /    | |    | |    | | \s
+                   > <      > <      \\ \\/ /     | |    | |    | | \s
+                  / . \\    / . \\      \\  /     _| |_  _| |_  _| |_\s
+                 /_/ \\_\\  /_/ \\_\\      \\/     |_____||_____||_____|
+                """, StampaVer2.print(28));
         assertEquals("""
-                """, StampaVer1.print(39));
+                 __   __  __   __  __   __  _____  __   __\s
+                 \\ \\ / /  \\ \\ / /  \\ \\ / / |_   _| \\ \\ / /\s
+                  \\ V /    \\ V /    \\ V /    | |    \\ V / \s
+                   > <      > <      > <     | |     > <  \s
+                  / . \\    / . \\    / . \\   _| |_   / . \\ \s
+                 /_/ \\_\\  /_/ \\_\\  /_/ \\_\\ |_____| /_/ \\_\\\s
+                """, StampaVer2.print(39));
         assertEquals("""
-                """, StampaVer1.print(51));
+                  _       _____\s
+                 | |     |_   _|
+                 | |       | | \s
+                 | |       | | \s
+                 | |____  _| |_\s
+                 |______||_____|
+                """, StampaVer2.print(51));
         assertEquals("""
-                """, StampaVer1.print(73));
+                  _       __   __  __   __  _____  _____  _____\s
+                 | |      \\ \\ / /  \\ \\ / / |_   _||_   _||_   _|
+                 | |       \\ V /    \\ V /    | |    | |    | | \s
+                 | |        > <      > <     | |    | |    | | \s
+                 | |____   / . \\    / . \\   _| |_  _| |_  _| |_\s
+                 |______| /_/ \\_\\  /_/ \\_\\ |_____||_____||_____|
+                """, StampaVer2.print(73));
         assertEquals("""
-                """, StampaVer1.print(99));
+                 __   __    _____  _____  __   __\s
+                 \\ \\ / /   / ____||_   _| \\ \\ / /\s
+                  \\ V /   | |       | |    \\ V / \s
+                   > <    | |       | |     > <  \s
+                  / . \\   | |____  _| |_   / . \\ \s
+                 /_/ \\_\\   \\_____||_____| /_/ \\_\\\s
+                """, StampaVer2.print(99));
     }
-    }
-
-
 }
+
+
+

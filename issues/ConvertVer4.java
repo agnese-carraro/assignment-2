@@ -1,5 +1,7 @@
 public class ConvertVer4 {
     public static String conv(int number) {
+        if (number > 1000) return null;
+
         String result = "";
         // da aggiungere al quarto passo
         String[] c4 = {"M"};
@@ -12,7 +14,7 @@ public class ConvertVer4 {
 
         // da aggiungere al quarto passo
         int n = number /1000;
-        if (n > 1 && n < 10) {
+        if (n == 1) {
             result = result.concat(c4[n-1]);
             number  = number - n*1000;
         }
@@ -20,7 +22,7 @@ public class ConvertVer4 {
 
         // da aggiungere al terzo passo.
         n = number /100;
-        if (n > 1 && n < 10) {
+        if (n > 0 && n < 10) {
             result = result.concat(c3[n-1]);
             number  = number - n*100;
         }
@@ -28,7 +30,7 @@ public class ConvertVer4 {
 
         // da aggiungere al seecondo passo.
         n = number /10;
-        if (n > 1 && n < 10) {
+        if (n > 0 && n < 10) {
             result = result.concat(c2[n-1]);
             number  = number - n*10;
         }
