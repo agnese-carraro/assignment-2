@@ -11,7 +11,7 @@ public class ConvertVer3 {
 
 
         // da aggiungere al terzo passo.
-        n = number /100;
+        int n = number /100;
         if (n > 1 && n < 10) {
             result = result.concat(c3[n-1]);
             number  = number - n*100;

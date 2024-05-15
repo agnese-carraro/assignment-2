@@ -34,33 +34,28 @@ public class StampaVer3 {
         String[] m = {"  __  __ ", " |  \\/  |", " | \\  / |",
                 " | |\\/| |", " | |  | |", " |_|  |_|"};
 
-
-        for (int j = 0; j < 6; j++) {
-            for (int k = 0; k < romanNumber.length(); k++) {
-                char letter = romanNumber.charAt(k);
-                if (letter == 'I') {
-                    result = result.concat(i[j]);
+        if (romanNumber != null) {
+            for (int j = 0; j < 6; j++) {
+                for (int k = 0; k < romanNumber.length(); k++) {
+                    char letter = romanNumber.charAt(k);
+                    if (letter == 'I') {
+                        result = result.concat(i[j]);
+                    } else if (letter == 'V') {
+                        result = result.concat(v[j]);
+                    } else if (letter == 'X') {
+                        result = result.concat(x[j]);
+                    } else if (letter == 'L') {
+                        result = result.concat(l[j]);
+                    } else if (letter == 'C') {
+                        result = result.concat(c[j]);
+                    } else if (letter == 'D') {
+                        result = result.concat(d[j]);
+                    } else if (letter == 'M') {
+                        result = result.concat(m[j]);
+                    }
                 }
-                else if (letter == 'V') {
-                    result = result.concat(v[j]);
-                }
-                else if (letter == 'X') {
-                    result = result.concat(x[j]);
-                }
-                else if (letter == 'L') {
-                    result = result.concat(l[j]);
-                }
-                else if (letter == 'C') {
-                    result = result.concat(c[j]);
-                }
-                else if (letter == 'D') {
-                    result = result.concat(d[j]);
-                }
-                else if (letter == 'M') {
-                    result = result.concat(m[j]);
-                }
+                result = result.concat("\n");
             }
-            result = result.concat("\n");
         }
 
         if (!result.isEmpty()) {return result;}
